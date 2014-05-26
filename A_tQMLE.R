@@ -32,3 +32,4 @@ A_tQMLE=function(h,x){
   Para.df=c(Estm[k,],Bdf.t[k])
   return(Para.df)
 }
+
