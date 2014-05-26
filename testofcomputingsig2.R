@@ -1,0 +1,16 @@
+h=250;
+a1=c(0.5,0.6);b1=0.3
+a2=c(0.02,0.05);b2=0.9
+x=garch.sim(alpha=a1,beta=b1,n=h)
+sim1x=xitong(h,a1,b1,x)$coef
+sim1my=MyMLE(h,a1,b1,x)$mle.N
+sim1x
+sim1x[1:2]
+sim1my
+source("comsig2.R")##计算各种估计方法得到的条件方差
+sigsys=comsig2(para=sim1x,x)##系统方法条件方差
+sigsys
+sigmy=comsig2(para=sim1my,x)##mymle方法的条件方差
+sigmy
+mymle.e=x/sqrt(sigmy)##计算mymle方法的样本新息！！
+mymle.e
