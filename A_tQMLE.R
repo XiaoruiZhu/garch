@@ -1,3 +1,4 @@
+# this is the function which can be used to estimate parameters of garch(1,1)
 # h is the length of time-series
 # x is the time-series
 A_tQMLE=function(h,x){
